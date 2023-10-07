@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
+    <title>Portfolio</title>
+    <meta name="description" content="Portfolio for engineer yewon" />
+    <meta name="author" content="Yewon" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- Open Graph Data -->
+    <meta property="og:title" content="포트폴리오" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="배포 후 생성된 URL" />
+    <meta property="og:image" content="배포 후 생성된 이미지 URL" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/0a8e3ef2f7.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Javascript -->
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/project.js" defer></script>
+    <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/type.js" defer></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header__logo">
+        <h1 class="header__logo__title">
+          <span class="hidden">yewon&#39;s portfolio</span>
+        </h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li>
+            <a class="header__menu__item active" href="#home">Home</a>
+          </li>
+          <li>
+            <a class="header__menu__item" href="#about">About</a>
+          </li>
+          <li>
+            <a class="header__menu__item" href="#work">Works</a>
+          </li>
+          <li>
+            <a class="header__menu__item" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- mobile nav -->
+      <button class="header__toggle" aria-label="navigation menu toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+    <!-- main -->
+    <main>
+      <!-- home -->
+      <section id="home" class="section">
+        <div class="home__container">
+          <img class="home__avatar" src="images/avatar.jpeg" alt="profile" />
+          <h1 class="home__title">
+            Hello I&#39;m <span class="home__title--strong">YEWON JEONG</span>
+          </h1>
+          <div>
+            <a class="home__contact" href="#contact">Contact Me</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- about -->
+      <section id="about" class="section max-container">
+        <h2 class="title">About me</h2>
+        <p class="description">
+          안녕하세요. 저는 웹사이트 구현에 흥미를 느껴 퍼블리셔의 길을 선택하게
+          되었고, 웹 에이전시에서 약 3년간 근무하며 경력을 쌓았습니다.
+        </p>
+        <p class="description">
+          주로 HTML, CSS, jQuery, JavaScript를 활용하는 환경에서 실무 능력을
+          키웠으며, 작업자들과의 커뮤니케이션 능력을 길러왔습니다.
+        </p>
+        <p class="description">
+          급변하는 디지털 환경과 시간이 흐를수록 높아지는 사용자들의 인터페이스
+          인식에 맞추어 어떻게 하면 더 효율적이고 능동적으로 대응하고 성장해나갈
+          수 있을지 치열하게 고민하고 더 많은 인사이트를 얻기 위해
+          자기주도적으로 노력하는 퍼블리셔가 되겠습니다.
+        </p>
+        <ul class="majors">
+          <li class="major">
+            <i class="fa-brands fa-html5 major__icon"></i>
+            <p class="major__title">UI Developer</p>
+            <p>HTML, CSS, JavaScript, jQuery</p>
+          </li>
+          <li class="major">
+            <i class="fa-solid fa-wand-magic-sparkles major__icon"></i>
+            <p class="major__title">Design tool</p>
+            <p>Photoshop, Figma, Zeplin</p>
+          </li>
+        </ul>
+        <ul class="jobs">
+          <li class="job">
+            <p class="job__name">유플리트 Upleat</p>
+            <p class="job__period">2020.08 - 2023.06</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- work -->
+      <section id="work" class="section">
+        <div class="max-container">
+          <h2 class="title">Work</h2>
+          <!-- <p class="description">projects</p> -->
+          <ul class="categories">
+            <li>
+              <button class="category category--selected" data-category="all">
+                All
+              </button>
+            </li>
+            <li>
+              <button class="category" data-category="web">web</button>
+            </li>
+            <li>
+              <button class="category" data-category="mobile">mobile</button>
+            </li>
+          </ul>
+          <ul class="projects">
+            <li class="project" data-type="mobile">
+              <a href="#none">
+                <img
+                  src="images/project/project-kbank.png"
+                  alt="project"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">
+                    Kbank 웹/앱 연간운영대행<br />
+                    및 신소스 리뉴얼
+                  </h3>
+                  <p class="project__period">2022.07 - 2023.06 (1년)</p>
+                  <ul class="project__descriptions">
+                    <li class="project__description">PA참여</li>
+                    <li class="project__description">Figma & Framer 툴 사용</li>
+                    <li class="project__description">
+                      페이지 퍼블리싱 작업시 Gulp 사용 경험
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="mobile">
+              <a href="#none">
+                <img
+                  src="images/project/project-kb.png"
+                  alt="project"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">NEW KB스타뱅킹 개선 SM</h3>
+                  <p class="project__period">2022.01 - 2022.07 (7개월)</p>
+                  <ul class="project__descriptions">
+                    <li class="project__description">PA참여</li>
+                    <li class="project__description">
+                      기존 NEW스타뱅킹 고도화 작업을 위한 전담반으로 구축과 운영
+                      동시 진행
+                    </li>
+                    <li class="project__description">
+                      어플 내 다크테마 적용 작업 진행
+                    </li>
+                    <li class="project__description">
+                      웹 표준 및 웹 접근성 고려하여 작업 진행
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="mobile">
+              <a href="#none">
+                <img
+                  src="images/project/project-kb.png"
+                  alt="project"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">NEW KB스타뱅킹 구축</h3>
+                  <p class="project__period">2021.04 - 2021.10 (7개월)</p>
+                  <ul class="project__descriptions">
+                    <li class="project__description">PA참여</li>
+                    <li class="project__description">
+                      상품 카테고리 내 페이지 전반 퍼블리싱
+                    </li>
+                    <li class="project__description">
+                      웹 표준 및 웹 접근성 고려하여 작업진행
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="web">
+              <a href="#none">
+                <img
+                  src="images/project/project-jeju.png"
+                  alt="project"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">
+                    제주항공 디지털채널<br />
+                    UI-UX 업그레이드
+                  </h3>
+                  <p class="project__period">2021.01 - 2021.03 (3개월)</p>
+                  <ul class="project__descriptions">
+                    <li class="project__description">PA참여</li>
+                    <li class="project__description">
+                      Gulp, SASS 활용 및 BEM 방식 적용 경험
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="web">
+              <a href="#none">
+                <img
+                  src="images/project/project-polestar.png"
+                  alt="project"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">
+                    폴스타 헬스케어<br />웹사이트 구축
+                  </h3>
+                  <p class="project__period">2020.11 - 2020.12</p>
+                  <ul class="project__descriptions">
+                    <li class="project__description">PA참여</li>
+                    <li class="project__description">
+                      메인 제외 웹사이트 내 페이지 전반 퍼블리싱
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="web">
+              <a href="#none">
+                <img
+                  src="images/project/project-timesqure.png"
+                  alt="project"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">타임스퀘어 웹사이트 운영 대행</h3>
+                  <p class="project__period">2020.10 - 2021.01 (4개월)</p>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="web">
+              <a href="#none">
+                <img
+                  src="images/project/project-pepper.png"
+                  alt="project"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">
+                    페퍼저축은행 웹사이트 운영 대행
+                  </h3>
+                  <p class="project__period">2020.10 - 2021.01 (4개월)</p>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="web">
+              <a href="#none">
+                <img
+                  src="images/project/project-lifeplus.png"
+                  alt="project"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">
+                    한화금융 디지털 디자인 가이드<br />웹사이트 구축
+                  </h3>
+                  <p class="project__period">2020.08 - 2020.10 (3개월)</p>
+                  <ul class="project__descriptions">
+                    <li class="project__description">PA참여</li>
+                    <li class="project__description">
+                      메인 제외 페이지 일부 퍼블리싱
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- arrow up -->
+      <aside>
+        <a class="arrow-up" href="#home">
+          <i class="fa-solid fa-arrow-up"></i>
+          <span class="hidden">위로</span>
+        </a>
+      </aside>
+    </main>
+    <!-- footer -->
+    <footer id="contact" class="section">
+      <div class="max-container">
+        <h2 class="title bold">Contact</h2>
+        <p class="description">
+          <i class="fa-solid fa-at"></i>dponezero@gmail.com
+        </p>
+      </div>
+      <p class="copyright">yewon(@dponezero) all rights reserved</p>
+    </footer>
+  </body>
+</html>
